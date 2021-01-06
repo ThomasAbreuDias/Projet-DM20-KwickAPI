@@ -43,3 +43,49 @@ table {
 	border-spacing: 0;
 }
 /* End of Eric Meyer’s reset */
+:root{
+	--bodybgcolor: #F1F7ED;
+	--cardbgcolor: #E0EEC6;
+	--successcolor:#7CA982;
+	--failurcolor: #d62828;
+}
+body {
+	background-color: var(--bodybgcolor);
+}
+h1 {
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 36pt;
+	margin: 3% 3% 3% 6%;
+}
+span {
+	margin: 2% 2% 2% 4%;
+}
+.failure {
+	color: var(--failurcolor);
+}
+.success {
+	color: var(--successcolor);
+}
+main {
+	max-width: 90%;
+	height: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+fieldset {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+}
+.card {
+	width: 40%;
+	background-color: var(--cardbgcolor);
+	border-radius: 10px 10px 10px 10px;
+}
+.card label {
+	margin-left: 3em;
+}
+.card input {
+	width: 70%;
+	margin-left: 4em;
+}

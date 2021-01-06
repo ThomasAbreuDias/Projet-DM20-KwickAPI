@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/backoffice.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script> -->
+    <script defer src="../js/services/storage.js"></script>
+    <script defer src="../js/services/global.js"></script>
+    <script defer src="../js/backoffice.js"></script>
+    <title>Projet 2020 | Thomas Abreu Dias</title>
+</head>
+<body>
+    <h1>Vous êtes connecté</h1>
+    <div id="logout">logout</div>
+    <span></span>
+    <main>
+        <form id="form-say" class="card" action="Get">
+            <label for="pet-select">Voici tous les utilisateurs connecté</label>
+            <select name="logged-user" id="user-select">
+                <option value="">--Utilisateurs connecté au service--</option>
+            </select>
+            <textarea title="Limite de 140 caractère !"name="msg" id="msg" cols="30" rows="10" maxlength="140"></textarea>
+            <button type="submit">S'épanouir socialement !</button>
+        </form>
+        <br>
+        <section id="msg-timeline" class="all-msg-ctrn">
+            <!-- ajouter un filtre ! -->
+            <br>
+        </section>
+    </main>
+</body>
+</html>
