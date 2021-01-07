@@ -39,23 +39,23 @@ class Storage {
     }
     loginHandler(id, username, token) {
         let data = this.get();
-
         data.id = id;
         data.username = username;
         data.token = token;
 
+        //ecriture de la session
         this.set(data);
+        //refraichissement de la page 
+        location.reload();
     }
     // useless ? a tester
     logoutHandler() {
         let data = this.get();
-
         data.id = false;
         data.token = false;
 
-        this.set(data);
         //supression de la session
-        // this.clear();
+        this.set(data);
         //refraichissement de la page 
         location.reload();
         

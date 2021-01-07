@@ -50,7 +50,8 @@ table {
 	--failurcolor: #d62828;
 }
 body {
-	background-color: var(--bodybgcolor);
+	/* background-color: var(--bodybgcolor); */
+	background: linear-gradient(90deg,var(--successcolor),var(--bodybgcolor));
 }
 h1 {
 	font-family: 'Courier New', Courier, monospace;
@@ -89,3 +90,4 @@ fieldset {
 	width: 70%;
 	margin-left: 4em;
 }
+/* background: linear-gradient(90deg,#00c4cc,#7d2ae8); */
