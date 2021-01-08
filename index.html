@@ -7,6 +7,9 @@
     <!-- jquery -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script> -->
+   <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet"> 
     <!-- botstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -18,33 +21,49 @@
     <script defer src="js/index.js"></script>
     <title>Projet 2020 | Thomas Abreu Dias</title>
 </head>
-<body>
-    <h1>Utilisation de l'api kwick</h1>
-    <span></span>
-    <main>
-        <form  id="form-login" class="card" method="get">
-            <fieldset >
-                <legend>Se connecter</legend>
-                <label for="username-login">Nom de d'utilisateur</label>
-                <input type="text" name="username-login" id="username-login">
-                <label for="password-login">Mot de passe</label>
-                <input type="password" name="password-login" id="password-login">
-                <button type="submit">Se connecter</button>
-            </fieldset>
-        </form>
-        <form id="form-signup" class="card" method="get">
-            <fieldset >
-                <legend>Inscription</legend>
-                <label for="username-signup">Nom de d'utilisateur</label>
-                <input type="text" name="username-signup" id="username-signup">
-                <label for="password-signup">Mot de passe</label>
-                <input type="password" name="password-signup" id="password-signup">
-                <label for="confirm">Confirmation</label>
-                <input type="password" name="confirm" id="confirm">
-                <button type="submit">S'inscrire</button>
-            </fieldset>
-        </form>
-        <a href="html/backoffice.html">Login</a>
+<body class="container">
+    <header class="text-center">
+        <h1>KWICK</h1>
+        <span></span>
+    </header>
+    <main class="row text-center">
+        <div class="col">
+            <form  id="form-login" class="form-signin" method="get">
+                <fieldset class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <legend class="my-0 fw-normal">Se connecter</legend>
+                    </div>
+                    <div class="card-body">
+                        <label for="username-login">Nom de d'utilisateur</label>
+                        <input class="form-control" type="text" name="username-login" id="username-login" required>
+                        <label for="password-login">Mot de passe</label>
+                        <input class="form-control" type="password" name="password-login" id="password-login" required>
+                        <br class="offset">
+                        <button type="submit" class="w-100 btn btn-lg btn-outline-primary">Se connecter</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="col">
+            <form id="form-signup" method="get">
+                <fieldset class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <legend class="my-0 fw-normal">Inscription</legend>
+                    </div>
+                    <div class="card-body">
+                        <label for="username-signup">Nom de d'utilisateur</label>
+                        <input class="form-control" type="text" name="username-signup" id="username-signup" required >
+                        <label for="password-signup">Mot de passe</label>
+                        <input class="form-control" type="password" name="password-signup" id="password-signup" required >
+                        <label for="confirm">Confirmation</label>
+                        <input class="form-control" type="password" name="confirm" id="confirm" required >
+                        <br>
+                        <button class="w-100 btn btn-lg btn-outline-primary" type="submit">S'inscrire</button>
+                    </div>
+                    
+                </fieldset>
+            </form> 
+        </div>
     </main>
 </body>
 </html>

@@ -31,9 +31,10 @@
 
                 //envoie de la requêtes
                 $.getJSON( middleware.request, {
-                    format: "jsonp"
+                    dataType: "jsonp",
                 }).done(( data ) => {
                     //storage.js dependencie
+                    console.log(data);
                     let storage = new Storage();
                     storage.loginHandler(data.result.id, middleware.username, data.result.token);
                 }).fail((data) => {
@@ -50,7 +51,7 @@
             $logout.click(() => {                                  
                 let lougout_request = Router.API_BASE_URL.concat("logout", "/", $.Constants.TOKEN, '/', $.Constants.USER_ID );
                 $.getJSON( lougout_request, {
-                    format: "jsonp"
+                    format: "jsonp",
                 }).done((data) => {
                     console.log(data);
                     storage.logoutHandler();

@@ -1,46 +1,8 @@
-main {
-    flex-direction: column;
-    max-width: 90%;
-	height: 0 auto;
-	display: flex;
-	justify-content: center;
-}
-article{
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 100px;
-    padding: 1em;
-    background-color: var(--cardbgcolor);
-    box-shadow: bisque;
-}
-p {
-    overflow: scroll;
-    width: 80%;
-    height: auto;
-    margin-left: 1em;
-}
 .perso {
-    padding-right: 0em;
-    align-self: flex-end;
-    background-color: bisque;
+    background-color: bisque !important;
 }
-.all-msg-ctrn {
-    display: flex;
-    flex-direction: column-reverse;
-    background-color: var(--cardbgcolor);
-    /* Largeur de 2 message */
-    width: 600px;
-    height: 0 auto;
-    margin-left: 5em;
-
-}
-time {
-    font-style: oblique;
-}
-.username {
-    font-weight: bold;
-}
-span {
-    margin: 2%;
+.messages-ctrn {
+    max-height: 60vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }

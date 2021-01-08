@@ -51,43 +51,12 @@ table {
 }
 body {
 	/* background-color: var(--bodybgcolor); */
-	background: linear-gradient(90deg,var(--successcolor),var(--bodybgcolor));
+	/* /background: linear-gradient(90deg,var(--successcolor),var(--bodybgcolor)); */
 }
 h1 {
-	font-family: 'Courier New', Courier, monospace;
-	font-size: 36pt;
-	margin: 3% 3% 3% 6%;
+	font-family: 'Xanh Mono', monospace ;
+	font-size: 72pt!important;
 }
-span {
-	margin: 2% 2% 2% 4%;
+.offset {
+	margin-bottom: 4em;
 }
-.failure {
-	color: var(--failurcolor);
-}
-.success {
-	color: var(--successcolor);
-}
-main {
-	max-width: 90%;
-	height: 0 auto;
-	display: flex;
-	justify-content: center;
-}
-fieldset {
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: center;
-}
-.card {
-	width: 40%;
-	background-color: var(--cardbgcolor);
-	border-radius: 10px 10px 10px 10px;
-}
-.card label {
-	margin-left: 3em;
-}
-.card input {
-	width: 70%;
-	margin-left: 4em;
-}
-/* background: linear-gradient(90deg,#00c4cc,#7d2ae8); */
