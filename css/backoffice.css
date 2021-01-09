@@ -6,3 +6,6 @@
     overflow-x: hidden;
     overflow-y: scroll;
 }
+.messages {
+    flex-direction: column-reverse !important;
+}

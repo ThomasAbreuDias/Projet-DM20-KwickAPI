@@ -22,24 +22,22 @@
     <title>Projet 2020 | Thomas Abreu Dias</title>
 </head>
 <body class="container">
-    <header class="text-center">
+    <header class=" row text-center">
         <h1>KWICK</h1>
-        <span></span>
+        <span id="ctrn-alert"></span>
     </header>
     <main class="row text-center">
         <div class="col">
             <form  id="form-login" class="form-signin" method="get">
                 <fieldset class="card mb-4 shadow-sm">
-                    <div class="card-header">
-                        <legend class="my-0 fw-normal">Se connecter</legend>
-                    </div>
+                    <legend class=" card-header my-0 fw-normal">Connexion</legend>
                     <div class="card-body">
                         <label for="username-login">Nom de d'utilisateur</label>
                         <input class="form-control" type="text" name="username-login" id="username-login" required>
                         <label for="password-login">Mot de passe</label>
                         <input class="form-control" type="password" name="password-login" id="password-login" required>
-                        <br class="offset">
-                        <button type="submit" class="w-100 btn btn-lg btn-outline-primary">Se connecter</button>
+                        <br>
+                        <button type="submit" class="w-100 btn btn-lg btn-outline-primary offset">Se connecter</button>
                     </div>
                 </fieldset>
             </form>
@@ -47,9 +45,7 @@
         <div class="col">
             <form id="form-signup" method="get">
                 <fieldset class="card mb-4 shadow-sm">
-                    <div class="card-header">
-                        <legend class="my-0 fw-normal">Inscription</legend>
-                    </div>
+                    <legend class="card-header my-0 fw-normal">Inscription</legend>
                     <div class="card-body">
                         <label for="username-signup">Nom de d'utilisateur</label>
                         <input class="form-control" type="text" name="username-signup" id="username-signup" required >

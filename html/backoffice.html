@@ -22,32 +22,35 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <h3>Mon super Site</h3>
-            <button id="logout" class="btn btn-dark nav-item">logout</button>
+            <button id="logout" class="btn btn-dark nav-item">Déconnexion</button>
         </div>
     </nav>
     <main class="container">
+        <br>
         <div class="row">
-            <span class="alert alert-success alert-dismissible fade show">Vous êtes connecté</span>
+            <div id="ctrn-alert" class="alert alert-success alert-dismissible fade show" role="alert">
+                <span id="ctrn-alert">Vous êtes connecté</span>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="row">
             <section class="col-sm-3 sidebar"><!-- Affiche tous les utilisateurs connecté -->
                 <header><h2>Connectés</h2></header>
-                <ul class="list-group" name="logged-user" id="user-select">
+                <ul class="list-group"  id="user-select">
                     <!-- Les utilisateurs sont injecté ici !  -->
                 </ul>
             </section>
-            <section class="col-sm-9 card">
-                <div class="row">
+            <section class="col-sm-9"><!-- Affichage des messages -->
+                <div class="card">
                     <header class="card-header"><h2>Messages</h2></header>
-                </div>
-                <div class="row"><!-- Affichage des messages -->
-                    <section class="card-body messages-ctrn">
-                        <!-- ajouter un filtre ! -->
-                        <div class=""><ul id="msg-timeline" class="list-group list-group-flush"></ul></div>
-                    </section>
-                </div>
-                <div class="row"><!-- Ecrire un nouveau messages -->
+                    <!-- Affichage des messages -->
+                    <div class="card-body messages-ctrn">
+                        <ul id="msg-timeline" class="messages list-group list-group-flush"></ul>
+                    </div>
+                    <!-- Ecrire un nouveau messages -->
                     <form id="form-say" class="card-footer" action="Get">
                         <div class="input-group">
-                            <textarea class="form-control input-sm" placeholder="Des choses à dire ? C'est ici !" title="Limite de 140 caractère !"name="msg" id="msg" maxlength="140"></textarea>
+                            <textarea class="form-control input-sm" placeholder="Des choses à dire ? C'est ici !" title="Limite de 140 caractère !" name="msg" id="msg" maxlength="140"></textarea>
                             <button class="btn btn-warning btn-sm" type="submit">S'épanouir socialement !</button>
                         </div>
                     </form>

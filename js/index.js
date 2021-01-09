@@ -7,9 +7,9 @@
         window.location.href = "html/backoffice.html";//page d'acceuil
     }
     //seting up sign up features
-    Router.publicSideRequest("signup", " n'est pas disponible !");
+    Router.publicSideHandler("signup", " n'est pas disponible !");
     //seting up login features
-    Router.publicSideRequest("login", "Identifiant ou mot de passe incorrect");
+    Router.publicSideHandler("login", "Identifiant ou mot de passe incorrect");
 })(jQuery);
 
 

@@ -45,8 +45,6 @@ class Storage {
 
         //ecriture de la session
         this.set(data);
-        //refraichissement de la page 
-        location.reload();
     }
     // useless ? a tester
     logoutHandler() {
@@ -56,8 +54,6 @@ class Storage {
 
         //supression de la session
         this.set(data);
-        //refraichissement de la page 
-        location.reload();
-        
+
     }
 }

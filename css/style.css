@@ -49,14 +49,14 @@ table {
 	--successcolor:#7CA982;
 	--failurcolor: #d62828;
 }
-body {
-	/* background-color: var(--bodybgcolor); */
-	/* /background: linear-gradient(90deg,var(--successcolor),var(--bodybgcolor)); */
-}
+
 h1 {
 	font-family: 'Xanh Mono', monospace ;
 	font-size: 72pt!important;
 }
 .offset {
-	margin-bottom: 4em;
+	margin-top: 62px;
+}
+body > header > span {
+	background-color: red;
 }
