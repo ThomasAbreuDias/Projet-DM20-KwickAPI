@@ -9,3 +9,6 @@
 .messages {
     flex-direction: column-reverse !important;
 }
+h1 {
+	font-size: 36pt!important;
+}

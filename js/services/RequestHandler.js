@@ -59,6 +59,8 @@
                 RequestHandler.requestHandler(middleware.request, false,
                 (data) => { 
                     storage.loginHandler(data.result.id, middleware.username, data.result.token);
+                    //Besoin de reload seulement en cas de succes
+                    location.reload();
                 },
                 (data) => {
                     $( "span" ).addClass("failure").text(err_msg).show().fadeOut( 3000 );
