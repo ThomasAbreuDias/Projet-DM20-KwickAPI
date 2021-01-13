@@ -1,11 +1,11 @@
 (function($) {
     const storage = new Storage();
-    const $alertArea = $( "ctrn-alert" );
-    Router = {
+    const $alertArea = $( "#ctrn-alert" );
+    RequestHandler = {
         API_BASE_URL: "http://greenvelvet.alwaysdata.net/kwick/api/",
         //genère la requête pour la parti publique de l'api
         publicRequestGenerator: (action) => {
-            let site_entry = Router.API_BASE_URL.concat(action, '/');
+            let site_entry = RequestHandler.API_BASE_URL.concat(action, '/');
             let password = $(`#password-${action}`).val();
             let username = $(`#username-${action}`).val(); 
             let backend_request = site_entry.concat(username, '/',password);
@@ -51,12 +51,12 @@
         publicSideHandler: (action, err_msg ) => {
             //ecoute sa soumission du formulaire
             $(`#form-${action}`).submit(function (event) {
-                let middleware = Router.publicRequestGenerator(action);//weird
+                let middleware = RequestHandler.publicRequestGenerator(action);//weird
                 if(action === "signup")
                     err_msg = middleware.username.concat(" ", err_msg);
 
                 //envoie de la requêtes
-                Router.requestHandler(middleware.request, false,
+                RequestHandler.requestHandler(middleware.request, false,
                 (data) => { 
                     storage.loginHandler(data.result.id, middleware.username, data.result.token);
                 },
@@ -72,8 +72,8 @@
         setLogout: () => {
             const $logout = $('#logout');
             $logout.click(() => {                                  
-                let lougout_request = Router.API_BASE_URL.concat("logout", "/", $.Constants.TOKEN, '/', $.Constants.USER_ID );
-                Router.requestHandler(
+                let lougout_request = RequestHandler.API_BASE_URL.concat("logout", "/", $.Constants.TOKEN, '/', $.Constants.USER_ID );
+                RequestHandler.requestHandler(
                     //requête
                     lougout_request, 
                     //page reload
@@ -95,9 +95,9 @@
             $("#form-say").submit(function (event) {
                 //recuperation du message aka tweet
                 let msg = $("#msg").val(); 
-                let backend_request = Router.API_BASE_URL.concat("say", "/",$.Constants.TOKEN, '/', $.Constants.USER_ID, '/', encodeURI(msg));
+                let backend_request = RequestHandler.API_BASE_URL.concat("say", "/",$.Constants.TOKEN, '/', $.Constants.USER_ID, '/', encodeURI(msg));
 
-                Router.requestHandler(
+                RequestHandler.requestHandler(
                     //requête
                     backend_request, 
                     //page reload
@@ -117,9 +117,9 @@
 
         //Charge tous les utilisateurs connectés
         getLoggedUsers: (callback_success) => {
-            let backend_request = Router.API_BASE_URL.concat("user/logged/", $.Constants.TOKEN);
+            let backend_request = RequestHandler.API_BASE_URL.concat("user/logged/", $.Constants.TOKEN);
 
-            Router.requestHandler(
+            RequestHandler.requestHandler(
                 //requête
                 backend_request, 
                 //page reload
@@ -143,8 +143,8 @@
                 timestamp = 0;
             }
             //msg list
-            let msg_request = Router.API_BASE_URL.concat("talk/list/", $.Constants.TOKEN, '/', timestamp);
-            Router.requestHandler(
+            let msg_request = RequestHandler.API_BASE_URL.concat("talk/list/", $.Constants.TOKEN, '/', timestamp);
+            RequestHandler.requestHandler(
                 //requête
                 msg_request, 
                 //page reload

@@ -43,9 +43,9 @@
         }
 
         //appel des fonctionss
-        Router.setLogout();
-        Router.setSay();
-        Router.getMessage(renderMessages);
-        Router.getLoggedUsers(renderUsers);
+        RequestHandler.setLogout();
+        RequestHandler.setSay();
+        RequestHandler.getMessage(renderMessages);
+        RequestHandler.getLoggedUsers(renderUsers);
     }
 })(jQuery);
